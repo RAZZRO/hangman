@@ -61,4 +61,9 @@
     font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
     font-weight: 700;
 }
+.color-accept {
+    background-image: linear-gradient(to bottom, rgb(187 247 208) , rgb(34 197 94));
+}
+
+  
 
