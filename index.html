@@ -21,14 +21,15 @@
         </div>
     </div>
 
-    <div id="game-page" class="display-page grid h-full">
+    <div id="game-page" class="display-page relative  grid h-full">
+
         <div class="row-auto  text-center ">
             <div id="header" class="flex flex-row justify-center">
             </div>
-            <!--                     <span id="l1" class=" block border-b-4 border-gray-500 w-12 h-16 mx-1 text-5xl font-serif font-bold"></span>
+            <!-- <span id="l1" class=" block border-b-4 border-gray-500 w-12 h-16 mx-1 text-5xl font-serif font-bold"></span>
                     <span id="l2" class=" block border-b-4 border-gray-500 w-12 h-16 mx-1 text-5xl font-serif font-bold"></span>
-                    <span id="l3" class=" block border-b-4 border-gray-500 w-12 h-16 mx-1 text-5xl font-serif font-bold"></span>
- -->
+                    <span id="l3" class=" block border-b-4 border-gray-500 w-12 h-16 mx-1 text-5xl font-serif font-bold"></span> -->
+
         </div>
 
 
@@ -37,9 +38,9 @@
             <div class="flex justify-center items-center h-full">
                 <div id="characters" class="w-72 h-56 relative">
 
-                     <!-- <hr
+                    <!-- <hr
                         class="hiden-body gallows-floor absolute w-40 h-2 bottom-2 right-2 bg-gray-700 border-0 rounded  "> -->
-                     <!-- <hr
+                    <!-- <hr
                         class="hiden-body gallows-wall absolute h-44 w-1 bottom-2 right-6 bg-gray-700 border-0 rounded  "> -->
                     <!-- <hr
                         class="hiden-body gallows-top-first absolute w-40 h-1 top-[40px] right-6 bg-gray-700 border-0 rounded  "> -->
@@ -133,6 +134,36 @@
                     </div>
                 </div>
             </div>
+
+        </div>
+        
+        <div class="display-page absolute bg-gradient-to-b from-red-600 opacity-70 to-gray-700 h-full w-full"></div>
+        <div class="display-page absolute h-full w-full">
+            <div class="h-full flex flex-col justify-center items-center font-serif">
+                <p class=" text-7xl font-bold mb-5">you lose!</p>
+                <p class=" text-3xl mb-5">the word was</p>
+                <p class=" text-3xl mb-5">computer</p>
+                <p class=" text-3xl mb-5">Better luck next time</p>
+                <button id="start-button"
+                    class=" mt-6 font-serif text-center text-xl rounded-2xl w-28 h-16 bg-sky-600 hover:text-lg hover:bg-sky-500 hover:border-6  ">Try
+                    again</button>
+
+            </div>
+
+
+        </div>
+        <div class="display-page absolute bg-gradient-to-b from-green-600 opacity-70 to-white h-full w-full"></div>
+        <div class="display-page absolute h-full w-full">
+            <div class="h-full flex flex-col justify-center items-center font-serif">
+                <p class=" text-7xl font-bold mb-5">you win!</p>
+                <p class=" text-3xl mb-5">congratulations,you found the word</p>
+                <p class=" text-3xl mb-5">Good job!</p>
+                <button id="start-button"
+                    class=" mt-6 font-serif text-center text-xl rounded-2xl w-28 h-16 bg-sky-600 hover:text-lg hover:bg-sky-500 hover:border-6  ">Try
+                    again</button>
+
+            </div>
+
 
         </div>
     </div>
