@@ -1,7 +1,6 @@
 const startPage = document.getElementById("start-page");
 const gamePage = document.getElementById("game-page");
 const startBtn = document.getElementById("start-button");
-// const keyboardBtn = document.querySelectorAll("#keyboard-button");
 const header = document.getElementById("header");
 const characters = document.getElementById("characters");
 const keyboard = document.getElementById("keyboard");
@@ -9,23 +8,12 @@ const chosenWord = document.getElementById("chosen-word");
 const loserPage = document.querySelectorAll("#loser-page");
 const winnerPage = document.querySelectorAll("#winner-page")
 const startAgain = document.querySelectorAll("#start-again");
-// const gallowsFloor = document.querySelector(".gallows-floor");
-// const gallowsWall = document.querySelector(".gallows-wall");
-// const gallowsTopFirst = document.querySelector(".gallows-top-first");
-// const gallowsTopSecond = document.querySelector(".gallows-top-second");
-// const gallowsRope = document.querySelector(".gallows-rope");
-// const playerHead = document.querySelector(".player-head");
-// const playerBody = document.querySelector(".player-body");
-// const playerRightHand = document.querySelector(".player-right-hand");
-// const playerLeftHand = document.querySelector(".player-left-hand");
-// const playerRightLeg = document.querySelector(".player-right-leg");
-// const playerLeftLeg = document.querySelector(".player-left-leg");
 
 
 
 
 
-const words = ["html", "css", "console", "desktop", "computer", "laptop", "phone"];
+const words = ["monitor", "keyboard", "console", "desktop", "computer", "laptop", "phone"];
 var wordString = [];
 var chance;
 let fill = new Boolean(false);
@@ -122,7 +110,6 @@ function main() {
         }
     }
     function winner() {
-        // window.alert("you win!!!!!!");
 
         for (let index = 0; index < 2; index++) {
 
@@ -143,7 +130,6 @@ function main() {
         }
     }
     function looser() {
-        // window.alert("you lose!!!!!!");
         chosenWord.textContent = `"${word}"`;
         for (let index = 0; index < 2; index++) {
 
