@@ -5,6 +5,10 @@ const startBtn = document.getElementById("start-button");
 const header = document.getElementById("header");
 const characters = document.getElementById("characters");
 const keyboard = document.getElementById("keyboard");
+const chosenWord = document.getElementById("chosen-word");
+const loserPage = document.querySelectorAll("#loser-page");
+const winnerPage = document.querySelectorAll("#winner-page")
+const startAgain = document.querySelectorAll("#start-again");
 // const gallowsFloor = document.querySelector(".gallows-floor");
 // const gallowsWall = document.querySelector(".gallows-wall");
 // const gallowsTopFirst = document.querySelector(".gallows-top-first");
@@ -29,6 +33,10 @@ var correctAnsswer;
 const letter = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
     'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'
 ];
+
+chance = 10;
+fill = false;
+correctAnsswer = 0;
 
 
 
@@ -103,33 +111,62 @@ function main() {
                     keyboardBtn[index].classList.remove("button-color");
                     keyboardBtn[index].classList.add("color-reject");
                     chance = chance - 1;
+                    console.log(chance);
                     ponishment();
-                    setTimeout(function () {
+
                         if (Number(chance) == 0) {
                             looser();
                         }
-                    }, 2000);
                 }
             }
         }
     }
     function winner() {
-        window.alert("you win!!!!!!");
+        // window.alert("you win!!!!!!");
 
-        while (header.firstChild) {
-            header.removeChild(header.lastChild);
-        }
-        while (characters.firstChild) {
-            characters.removeChild(characters.firstChild);
-        }
-        while (keyboard.firstChild) {
-            keyboard.removeChild(keyboard.firstChild);
-        }
+        for (let index = 0; index < 2; index++) {
 
-        main();
+            winnerPage[index].classList.remove("display-page");
+        }
+        for (let index = 0; index < 2; index++) {
+            startAgain[index].addEventListener('click', () => {
+                for (let index = 0; index < 2; index++) {
+
+                    winnerPage[index].classList.add("display-page");
+                }
+                chance = 10;
+                fill = false;
+                correctAnsswer = 0;
+                playGameAgain();
+
+            });
+        }
     }
     function looser() {
-        window.alert("you lose!!!!!!");
+        // window.alert("you lose!!!!!!");
+        chosenWord.textContent = `"${word}"`;
+        for (let index = 0; index < 2; index++) {
+
+            loserPage[index].classList.remove("display-page");
+        }
+        for (let index = 0; index < 2; index++) {
+            startAgain[index].addEventListener('click', () => {
+                for (let index = 0; index < 2; index++) {
+
+                    loserPage[index].classList.add("display-page");
+                }
+                chance = 10;
+                fill = false;
+                correctAnsswer = 0;
+                playGameAgain();
+
+            });
+        }
+
+
+
+    }
+    function playGameAgain() {
 
         while (header.firstChild) {
             header.removeChild(header.lastChild);
@@ -151,9 +188,7 @@ function main() {
 
 
 
-    chance = 10;
-    fill = false;
-    correctAnsswer = 0;
+
 
     //choose a word
     var wordIndex = randomNumber(0, 6)

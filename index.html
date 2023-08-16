@@ -136,30 +136,32 @@
             </div>
 
         </div>
-        
-        <div class="display-page absolute bg-gradient-to-b from-red-600 opacity-70 to-gray-700 h-full w-full"></div>
-        <div class="display-page absolute h-full w-full">
-            <div class="h-full flex flex-col justify-center items-center font-serif">
-                <p class=" text-7xl font-bold mb-5">you lose!</p>
-                <p class=" text-3xl mb-5">the word was</p>
-                <p class=" text-3xl mb-5">computer</p>
-                <p class=" text-3xl mb-5">Better luck next time</p>
-                <button id="start-button"
-                    class=" mt-6 font-serif text-center text-xl rounded-2xl w-28 h-16 bg-sky-600 hover:text-lg hover:bg-sky-500 hover:border-6  ">Try
+
+        <div id="loser-page"
+            class="display-page absolute bg-gradient-to-b from-red-600 opacity-80 to-gray-700 h-full w-full"></div>
+        <div id="loser-page" class="display-page absolute h-full w-full">
+            <div class="h-full flex flex-col justify-center items-center font-serif text-white">
+                <p class=" text-7xl font-bold mb-6">you lose!</p>
+                <p class=" text-2xl mb-6">the word was</p>
+                <p id="chosen-word" class=" text-2xl mb-6">computer</p>
+                <p class=" text-2xl mb-6">Better luck next time</p>
+                <button id="start-again"
+                    class=" mt-7 font-serif text-center text-xl rounded-2xl w-28 h-16 bg-sky-600 hover:text-lg hover:bg-sky-500 hover:border-6  ">Try
                     again</button>
 
             </div>
 
 
         </div>
-        <div class="display-page absolute bg-gradient-to-b from-green-600 opacity-70 to-white h-full w-full"></div>
-        <div class="display-page absolute h-full w-full">
-            <div class="h-full flex flex-col justify-center items-center font-serif">
-                <p class=" text-7xl font-bold mb-5">you win!</p>
-                <p class=" text-3xl mb-5">congratulations,you found the word</p>
-                <p class=" text-3xl mb-5">Good job!</p>
-                <button id="start-button"
-                    class=" mt-6 font-serif text-center text-xl rounded-2xl w-28 h-16 bg-sky-600 hover:text-lg hover:bg-sky-500 hover:border-6  ">Try
+        <div id="winner-page"
+            class="display-page absolute bg-gradient-to-b from-green-800 opacity-80 to-gray-700 h-full w-full"></div>
+        <div id="winner-page" class="display-page absolute h-full w-full">
+            <div class="h-full flex flex-col justify-center items-center font-serif text-white">
+                <p class=" text-7xl font-bold mb-6">you win!</p>
+                <p class=" text-2xl mb-6">congratulations,you found the word</p>
+                <p class=" text-2xl mb-6">Good job!</p>
+                <button id="start-again"
+                    class=" mt-7 font-serif text-center text-xl rounded-2xl w-28 h-16 bg-sky-600 hover:text-lg hover:bg-sky-500 hover:border-6  ">Try
                     again</button>
 
             </div>
